@@ -1,24 +1,18 @@
 package com.example.hospitals.data;
 
 public class MedicalHistory {
-    private String condition;
-    private String treatment;
+    private String treatment;  // Treatment for the condition
+    private String illnesses;  // List of illnesses (you can also consider using an array or list)
+    private String allergies;  // List of allergies (you can also consider using an array or list)
 
     // Constructor
-    public MedicalHistory(String condition, String treatment) {
-        this.condition = condition;
+    public MedicalHistory(String treatment, String illnesses, String allergies) {
         this.treatment = treatment;
+        this.illnesses = illnesses;
+        this.allergies = allergies;
     }
 
     // Getter and setter methods
-    public String getCondition() {
-        return condition;
-    }
-
-    public void setCondition(String condition) {
-        this.condition = condition;
-    }
-
     public String getTreatment() {
         return treatment;
     }
@@ -27,4 +21,19 @@ public class MedicalHistory {
         this.treatment = treatment;
     }
 
+    public String getIllnesses() {
+        return illnesses;
+    }
+
+    public void setIllnesses(String illnesses) {
+        this.illnesses = illnesses;
+    }
+
+    public String getAllergies() {
+        return allergies;
+    }
+
+    public void setAllergies(String allergies) {
+        this.allergies = allergies;
+    }
 }
