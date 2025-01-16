@@ -4,23 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    tools:context=".SignUpActivity"
+    android:padding="16dp">
 
-    <!-- Title or App Name -->
+    <!-- Title -->
     <TextView
-        android:id="@+id/signUpTitle"
+        android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
+        android:text="Sign up"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
 
-    <!-- User ID Field -->
+    <!-- ID Field -->
     <EditText
         android:id="@+id/editTextId"
         android:layout_width="0dp"
@@ -29,10 +29,24 @@
         android:inputType="text"
         android:padding="16dp"
         android:background="@drawable/rounded_input_field"
-        app:layout_constraintTop_toBottomOf="@+id/signUpTitle"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_margin="40dp"/>
+        android:layout_marginTop="20dp" />
+
+    <!-- Name Field -->
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="text"
+        android:padding="16dp"
+        android:background="@drawable/rounded_input_field"
+        app:layout_constraintTop_toBottomOf="@id/editTextId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
     <!-- Email Field -->
     <EditText
@@ -43,50 +57,36 @@
         android:inputType="textEmailAddress"
         android:padding="16dp"
         android:background="@drawable/rounded_input_field"
-        app:layout_constraintTop_toBottomOf="@+id/editTextId"
+        app:layout_constraintTop_toBottomOf="@id/editTextName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_margin="16dp"/>
-
-    <!-- Name Field -->
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Full Name"
-        android:inputType="text"
-        android:padding="16dp"
-        android:background="@drawable/rounded_input_field"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_margin="16dp"/>
+        android:layout_marginTop="16dp" />
 
     <!-- Phone Number Field -->
     <EditText
-        android:id="@+id/editTextPhoneNumber"
+        android:id="@+id/editTextPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Phone Number"
         android:inputType="phone"
         android:padding="16dp"
         android:background="@drawable/rounded_input_field"
-        app:layout_constraintTop_toBottomOf="@+id/editTextName"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_margin="16dp"/>
+        android:layout_marginTop="16dp" />
 
     <!-- Blood Type Spinner -->
     <Spinner
         android:id="@+id/spinnerBloodType"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber"
+        android:padding="16dp"
+        android:background="@drawable/rounded_input_field"
+        app:layout_constraintTop_toBottomOf="@id/editTextPhone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_margin="16dp"
-        android:padding="16dp"
-        android:background="@drawable/rounded_input_field" />
+        android:layout_marginTop="16dp" />
 
     <!-- Birth Date Field -->
     <EditText
@@ -97,10 +97,24 @@
         android:inputType="date"
         android:padding="16dp"
         android:background="@drawable/rounded_input_field"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerBloodType"
+        app:layout_constraintTop_toBottomOf="@id/spinnerBloodType"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_margin="16dp"/>
+        android:layout_marginTop="16dp" />
+
+    <!-- Name Field -->
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:background="@drawable/rounded_input_field"
+        app:layout_constraintTop_toBottomOf="@id/editTextId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
     <!-- Sign Up Button -->
     <Button
@@ -111,72 +125,49 @@
         android:backgroundTint="@color/colorAccent"
         android:textColor="@android:color/white"
         android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBirthDate"
+        app:layout_constraintTop_toBottomOf="@id/editTextBirthDate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_margin="32dp"/>
+        android:layout_marginTop="24dp" />
 
+    <!-- Already have an account? Log In -->
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Log In"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/buttonSignUp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+
+    <ImageView
+        android:id="@+id/googleLogo"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_google_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.291"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLogin" />
+
+    <TextView
+        android:id="@+id/googleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Sign up with Google"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintStart_toEndOf="@id/googleLogo"
+        app:layout_constraintStart_toStartOf="@id/googleLogo"
+        app:layout_constraintTop_toBottomOf="@id/textViewLogin" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    android:orientation="vertical"-->
-<!--    android:padding="16dp">-->
-
-<!--    &lt;!&ndash; User ID Field &ndash;&gt;-->
-<!--    <EditText-->
-<!--        android:id="@+id/editTextId"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="ID"-->
-<!--        android:inputType="text" />-->
-
-<!--    &lt;!&ndash; Email Field &ndash;&gt;-->
-<!--    <EditText-->
-<!--        android:id="@+id/editTextEmail"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="Email"-->
-<!--        android:inputType="textEmailAddress" />-->
-
-<!--    &lt;!&ndash; Name Field &ndash;&gt;-->
-<!--    <EditText-->
-<!--        android:id="@+id/editTextName"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="Name"-->
-<!--        android:inputType="text" />-->
-
-<!--    &lt;!&ndash; Phone Number Field &ndash;&gt;-->
-<!--    <EditText-->
-<!--        android:id="@+id/editTextPhoneNumber"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="Phone Number"-->
-<!--        android:inputType="phone" />-->
-
-<!--    &lt;!&ndash; Blood Type Spinner &ndash;&gt;-->
-<!--    <Spinner-->
-<!--        android:id="@+id/spinnerBloodType"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content" />-->
-
-<!--    &lt;!&ndash; Birth Date Field &ndash;&gt;-->
-<!--    <EditText-->
-<!--        android:id="@+id/editTextBirthDate"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="Birth Date (00/00/0000)"-->
-<!--        android:inputType="date" />-->
-
-<!--    &lt;!&ndash; Sign Up Button &ndash;&gt;-->
-<!--    <Button-->
-<!--        android:id="@+id/buttonSignUp"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Sign Up" />-->
-<!--</LinearLayout>-->
