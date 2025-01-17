@@ -6,6 +6,8 @@ public class MedicalHistory {
     private String allergies;  // List of allergies (you can also consider using an array or list)
 
     // Constructor
+
+    public MedicalHistory(){}
     public MedicalHistory(String treatment, String illnesses, String allergies) {
         this.treatment = treatment;
         this.illnesses = illnesses;

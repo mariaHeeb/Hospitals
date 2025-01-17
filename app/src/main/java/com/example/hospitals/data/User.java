@@ -2,6 +2,8 @@ package com.example.hospitals.data;
 
 public class User {
     private String id;
+
+    private String password;
     private String name;
     private String phoneNumber;
     private String bloodType;
@@ -10,9 +12,10 @@ public class User {
     private MedicalHistory mH;  // MedicalHistory is a separate class
 
     // Constructor
-    public User(String id, String name, String phoneNumber, String bloodType, String gmail, MedicalHistory mH) {
+    public User(String id, String name,String password, String phoneNumber, String bloodType, String gmail, MedicalHistory mH) {
         this.id = id;
         this.name = name;
+        this.password=password;
         this.phoneNumber = phoneNumber;
         this.bloodType = bloodType;
         this.gmail = gmail;
@@ -75,6 +78,15 @@ public class User {
 
     public void setMH(MedicalHistory mH) {
         this.mH = mH;
+    }
+
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     // Method to calculate age (assuming birthdate is provided or calculated in another way)
