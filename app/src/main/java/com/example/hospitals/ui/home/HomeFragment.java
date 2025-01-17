@@ -92,7 +92,9 @@ public class HomeFragment extends Fragment {
         // Build the JSON payload
         JsonObject userMessageObject = new JsonObject();
         userMessageObject.addProperty("role", "user");
-        userMessageObject.addProperty("content", userMessage+"always response like a medical");
+        userMessageObject.addProperty("content", userMessage+" Here’s the updated sentence:  \n" +
+                "\n" +
+                "Always respond like a professional doctor, ensuring a more polished and precise approach, and make sure that your response directs the patient to the needed action. Additionally, ensure your response is summarized and divided into points that a patient in an emergency situation could use to save their life.");
 
         JsonArray messagesArray = new JsonArray();
         messagesArray.add(userMessageObject);

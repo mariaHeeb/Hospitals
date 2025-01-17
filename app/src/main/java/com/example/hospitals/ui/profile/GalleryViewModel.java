@@ -1,4 +1,4 @@
-package com.example.hospitals.ui.gallery;
+package com.example.hospitals.ui.profile;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
