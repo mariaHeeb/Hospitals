@@ -9,57 +9,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="150dp"
         android:padding="16dp">
 
         <!-- Search Bar -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#FFFFFF"
-            android:padding="8dp"
-            android:elevation="2dp"
-            android:layout_marginBottom="16dp">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_search"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Search"
-                android:textSize="14sp"
-                android:background="@null"
-                android:padding="0dp" />
-        </LinearLayout>
-
-        <!-- Category Section -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Category"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#000"
-            android:layout_marginBottom="8dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="16dp">
 
             <!-- Row 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="4"
+                android:weightSum="3"
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
@@ -70,8 +30,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/ic_brain"
                         android:layout_marginBottom="4dp" />
 
@@ -79,7 +39,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Brain"
-                        android:textSize="14sp"
+                        android:textSize="20sp"
                         android:textColor="#333" />
                 </LinearLayout>
 
@@ -91,8 +51,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/ic_stomach"
                         android:layout_marginBottom="4dp" />
 
@@ -100,7 +60,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Stomach"
-                        android:textSize="14sp"
+                        android:textSize="20sp"
                         android:textColor="#333" />
                 </LinearLayout>
 
@@ -112,8 +72,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/ic_eye"
                         android:layout_marginBottom="4dp" />
 
@@ -121,30 +81,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Eye"
-                        android:textSize="14sp"
+                        android:textSize="20sp"
                         android:textColor="#333" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/ic_heart"
-                        android:layout_marginBottom="4dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Heart"
-                        android:textSize="14sp"
-                        android:textColor="#333" />
-                </LinearLayout>
             </LinearLayout>
 
 
@@ -153,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="4"
+                android:weightSum="3"
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
@@ -164,8 +105,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/ic_bone"
                         android:layout_marginBottom="4dp" />
 
@@ -173,7 +114,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Bone"
-                        android:textSize="14sp"
+                        android:textSize="20sp"
                         android:textColor="#333" />
                 </LinearLayout>
 
@@ -185,8 +126,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/ic_women"
                         android:layout_marginBottom="4dp" />
 
@@ -194,7 +135,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Women"
-                        android:textSize="14sp"
+                        android:textSize="20sp"
                         android:textColor="#333" />
                 </LinearLayout>
 
@@ -206,8 +147,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/ic_child"
                         android:layout_marginBottom="4dp" />
 
@@ -215,30 +156,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="child"
-                        android:textSize="14sp"
+                        android:textSize="20sp"
                         android:textColor="#333" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/ic_mental_health"
-                        android:layout_marginBottom="4dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="mental_health"
-                        android:textSize="14sp"
-                        android:textColor="#333" />
-                </LinearLayout>
             </LinearLayout>
 
 
@@ -247,7 +169,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="4"
+                android:weightSum="3"
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
@@ -258,8 +180,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/ic_lungs"
                         android:layout_marginBottom="4dp" />
 
@@ -267,7 +189,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Lungs"
-                        android:textSize="14sp"
+                        android:textSize="20sp"
                         android:textColor="#333" />
                 </LinearLayout>
 
@@ -279,8 +201,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/ic_kidneys"
                         android:layout_marginBottom="4dp" />
 
@@ -288,7 +210,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Kidneys"
-                        android:textSize="14sp"
+                        android:textSize="20sp"
                         android:textColor="#333" />
                 </LinearLayout>
 
@@ -300,8 +222,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/ic_liver"
                         android:layout_marginBottom="4dp" />
 
@@ -309,130 +231,86 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Liver"
-                        android:textSize="14sp"
+                        android:textSize="20sp"
                         android:textColor="#333" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/ic_skin"
-                        android:layout_marginBottom="4dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Skin"
-                        android:textSize="14sp"
-                        android:textColor="#333" />
-                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginBottom="16dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="#FFFFFF"
-                android:padding="8dp"
-                android:elevation="2dp"
-                android:layout_marginBottom="8dp">
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/ic_doctor1"
-                    android:layout_marginEnd="8dp" />
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_heart"
+                    android:layout_marginBottom="4dp" />
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dr. Daryl Nehls"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textColor="#000" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Family Doctor"
-                        android:textSize="12sp"
-                        android:textColor="#666" />
-                </LinearLayout>
-
-                <Button
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Available"
-                    android:textSize="12sp"
-                    android:backgroundTint="#4CAF50"
-                    android:textColor="#FFF" />
+                    android:text="Heart"
+                    android:textSize="20sp"
+                    android:textColor="#333" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_mental_health"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mental_health"
+                    android:textSize="20sp"
+                    android:textColor="#333" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="#FFFFFF"
-                android:padding="8dp"
-                android:elevation="2dp">
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/ic_doctor2"
-                    android:layout_marginEnd="8dp" />
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_skin"
+                    android:layout_marginBottom="4dp" />
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dr. Sophia Patel"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textColor="#000" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pediatrician"
-                        android:textSize="12sp"
-                        android:textColor="#666" />
-                </LinearLayout>
-
-                <Button
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Available"
-                    android:textSize="12sp"
-                    android:backgroundTint="#4CAF50"
-                    android:textColor="#FFF" />
+                    android:text="Skin"
+                    android:textSize="20sp"
+                    android:textColor="#333" />
             </LinearLayout>
+
+
         </LinearLayout>
+
+
+
     </LinearLayout>
 
 </ScrollView>

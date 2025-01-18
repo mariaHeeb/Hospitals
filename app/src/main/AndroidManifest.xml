@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Hospitals"
         tools:targetApi="31">
         <activity
+            android:name=".ResultsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/title_activity_main2"
@@ -25,9 +28,8 @@
             android:exported="false" />
         <activity
             android:name=".LogInActivity"
-            android:theme="@style/Theme.Hospitals.NoActionBar"
-
-        android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Hospitals.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

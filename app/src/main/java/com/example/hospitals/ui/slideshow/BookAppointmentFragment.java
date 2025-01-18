@@ -70,23 +70,23 @@ public class BookAppointmentFragment extends Fragment {
      * Find all views by ID
      */
     private void initViews(View view) {
-        searchEditText = view.findViewById(R.id.searchEditText);
-
-        // Categories (Row 1)
-        brainLayout = view.findViewById(R.id.brainLayout);
-        stomachLayout = view.findViewById(R.id.stomachLayout);
-        eyeLayout = view.findViewById(R.id.eyeLayout);
-        heartLayout = view.findViewById(R.id.heartLayout);
-
-        // Categories (Row 2)
-        lungsLayout = view.findViewById(R.id.lungsLayout);
-        kidneysLayout = view.findViewById(R.id.kidneysLayout);
-        liverLayout = view.findViewById(R.id.liverLayout);
-        skinLayout = view.findViewById(R.id.skinLayout);
-
-        // Doctor Buttons
-        doctorOneButton = view.findViewById(R.id.doctorOneButton);
-        doctorTwoButton = view.findViewById(R.id.doctorTwoButton);
+//        searchEditText = view.findViewById(R.id.searchEditText);
+//
+//        // Categories (Row 1)
+//        brainLayout = view.findViewById(R.id.brainLayout);
+//        stomachLayout = view.findViewById(R.id.stomachLayout);
+//        eyeLayout = view.findViewById(R.id.eyeLayout);
+//        heartLayout = view.findViewById(R.id.heartLayout);
+//
+//        // Categories (Row 2)
+//        lungsLayout = view.findViewById(R.id.lungsLayout);
+//        kidneysLayout = view.findViewById(R.id.kidneysLayout);
+//        liverLayout = view.findViewById(R.id.liverLayout);
+//        skinLayout = view.findViewById(R.id.skinLayout);
+//
+//        // Doctor Buttons
+//        doctorOneButton = view.findViewById(R.id.doctorOneButton);
+//        doctorTwoButton = view.findViewById(R.id.doctorTwoButton);
     }
 
     /**
