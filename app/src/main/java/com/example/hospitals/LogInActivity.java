@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.hospitals.db.UserDatabase;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,6 +27,7 @@ public class LogInActivity extends AppCompatActivity {
     private TextView googleText;
 
     private DatabaseReference databaseReference;
+    private UserDatabase userDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,18 @@ public class LogInActivity extends AppCompatActivity {
 
         // Initialize Firebase Realtime Database
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
+
+        // Initialize SQLite Database
+        userDatabase = new UserDatabase(this);
+        userDatabase.open();
+
+        // Check if last login info exists
+        String[] lastLogin = userDatabase.getLastLogin();
+        if (lastLogin != null) {
+            String savedId = lastLogin[0];
+            String savedPassword = lastLogin[1];
+            loginUser(savedId, savedPassword);
+        }
 
         // Initialize UI components
         editTextId = findViewById(R.id.editTextId);
@@ -88,6 +102,10 @@ public class LogInActivity extends AppCompatActivity {
                     if (storedPassword != null && storedPassword.equals(password)) {
                         // Password matches
                         Toast.makeText(LogInActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
+
+                        // Save login info for future use
+                        userDatabase.saveUserLogin(id, password);
+
                         // Redirect to the main activity or dashboard
                         startActivity(new Intent(LogInActivity.this, MainActivity2.class));
                         finish();
@@ -111,5 +129,11 @@ public class LogInActivity extends AppCompatActivity {
     private void handleGoogleSignIn() {
         Toast.makeText(LogInActivity.this, "Google Sign-In is not yet implemented.", Toast.LENGTH_SHORT).show();
         // Add Google Sign-In logic here if needed
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        userDatabase.close();
     }
 }

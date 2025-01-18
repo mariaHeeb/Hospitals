@@ -12,14 +12,20 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_profile"
         android:name="com.example.hospitals.ui.profile.ProfileFragment"
-        android:label="@string/menu_gallery"
+        android:label="Profile"
         tools:layout="@layout/fragment_profile" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_book_appointment"
         android:name="com.example.hospitals.ui.slideshow.BookAppointmentFragment"
-        android:label="@string/menu_slideshow"
+        android:label="Book Appointment"
         tools:layout="@layout/fragment_book_appointment" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.hospitals.ui.logout.LogoutFragment"
+        android:label="Logout"
+        tools:layout="@layout/fragment_logout" />
 </navigation>

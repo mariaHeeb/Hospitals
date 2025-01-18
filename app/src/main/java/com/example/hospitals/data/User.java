@@ -8,17 +8,19 @@ public class User {
     private String phoneNumber;
     private String bloodType;
     private int age;
-    private String gmail;
+    private String email;
+
+    private String image;
     private MedicalHistory mH;  // MedicalHistory is a separate class
 
     // Constructor
-    public User(String id, String name,String password, String phoneNumber, String bloodType, String gmail, MedicalHistory mH) {
+    public User(String id, String name,String password, String phoneNumber, String bloodType, String email, MedicalHistory mH) {
         this.id = id;
         this.name = name;
         this.password=password;
         this.phoneNumber = phoneNumber;
         this.bloodType = bloodType;
-        this.gmail = gmail;
+        this.email = email;
         this.mH = mH;
         this.age = calculateAge();  // Assuming calculateAge() is a method that calculates the user's age based on their birthdate
     }
@@ -64,12 +66,12 @@ public class User {
         this.age = age;
     }
 
-    public String getGmail() {
-        return gmail;
+    public String getemail() {
+        return email;
     }
 
-    public void setGmail(String gmail) {
-        this.gmail = gmail;
+    public void setemail(String email) {
+        this.email = email;
     }
 
     public MedicalHistory getMH() {
@@ -87,6 +89,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     // Method to calculate age (assuming birthdate is provided or calculated in another way)

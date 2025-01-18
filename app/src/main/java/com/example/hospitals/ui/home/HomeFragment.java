@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment {
     // Correct API endpoint (replace with the actual endpoint from Groq documentation)
     private static final String API_URL = "https://api.groq.com/openai/v1/chat/completions"; // Groq's OpenAI-compatible chat endpoint
     // API Key
-    private static final String API_KEY = "";
+    private static final String API_KEY = "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";
 
     @Nullable
     @Override
@@ -92,9 +92,14 @@ public class HomeFragment extends Fragment {
         // Build the JSON payload
         JsonObject userMessageObject = new JsonObject();
         userMessageObject.addProperty("role", "user");
-        userMessageObject.addProperty("content", userMessage+" Here’s the updated sentence:  \n" +
+        userMessageObject.addProperty("content", userMessage + " Here’s the updated sentence:  \n" +
                 "\n" +
-                "Always respond like a professional doctor, ensuring a more polished and precise approach, and make sure that your response directs the patient to the needed action. Additionally, ensure your response is summarized and divided into points that a patient in an emergency situation could use to save their life.");
+                "Always respond like a professional doctor, ensuring a more polished and precise approach. Ensure that your response directs the patient to the needed action, is summarized, and divided into points that a patient in an emergency situation could use to save their life. \n" +
+                "(NO PREAMBLE)\n" +
+                "(response in the same language the user ask)\n" +
+
+                "If the user greets with 'hi', 'hello', or other casual greetings, respond with a professional acknowledgment and a prompt to proceed with any medical queries they may have.");
+
 
         JsonArray messagesArray = new JsonArray();
         messagesArray.add(userMessageObject);
