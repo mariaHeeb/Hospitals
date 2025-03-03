@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment {
     // Correct API endpoint (replace with the actual endpoint from Groq documentation)
     private static final String API_URL = "https://api.groq.com/openai/v1/chat/completions"; // Groq's OpenAI-compatible chat endpoint
     // API Key
-    private static final String API_KEY = "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";
+    private static final String API_KEY = "API_KEY";
 
     @Nullable
     @Override
