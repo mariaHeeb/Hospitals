@@ -13,6 +13,8 @@ public class User {
     private String image;
     private MedicalHistory mH;  // MedicalHistory is a separate class
 
+
+    public User(){}
     // Constructor
     public User(String id, String name,String password, String phoneNumber, String bloodType, String email, MedicalHistory mH) {
         this.id = id;

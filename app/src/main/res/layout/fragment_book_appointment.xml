@@ -4,13 +4,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f9f9f9">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+
+    <!-- Top Title Section -->
+        <TextView
+            android:id="@+id/textBodyEssentials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="BODY ESSENTIALS"
+            android:textColor="#A3A3A3"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textYourBodyYourHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Body, Your Health"
+        android:layout_gravity="center"
+
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Explore our comprehensive health guides organized by body systems"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:layout_marginTop="4dp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="150dp"
         android:padding="16dp">
+    </LinearLayout>
 
         <!-- Search Bar -->
 
@@ -23,6 +69,7 @@
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
+                    android:id="@+id/brainLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -44,6 +91,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/stomachLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -65,6 +113,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/eyeLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -98,6 +147,7 @@
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
+                    android:id="@+id/boneLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -119,6 +169,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/womenLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -140,6 +191,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/childLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -173,6 +225,7 @@
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
+                    android:id="@+id/lungsLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -194,6 +247,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/kidneysLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -215,6 +269,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/liverLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -245,6 +300,7 @@
             android:layout_marginBottom="16dp">
 
             <LinearLayout
+                android:id="@+id/heartLayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -265,6 +321,7 @@
                     android:textColor="#333" />
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/mentalHealthLayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -286,6 +343,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/skinLayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

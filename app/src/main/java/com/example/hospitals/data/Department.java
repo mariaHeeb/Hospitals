@@ -1,16 +1,21 @@
 package com.example.hospitals.data;
 
-public class Department {
-    private String name;  // Name of the department
-    private Appointment arrAp;  // Appointment class (referencing another class)
+import java.util.List;
 
-    // Constructor
-    public Department(String name, Appointment arrAp) {
+public class Department {
+    private String name;
+    private List<Appointment> arrAp; // Changed from Appointment[] to List<Appointment>
+
+    // No-argument constructor
+    public Department() { }
+
+    public Department(String name, List<Appointment> arrAp) {
         this.name = name;
         this.arrAp = arrAp;
     }
 
     // Getter and setter methods
+
     public String getName() {
         return name;
     }
@@ -19,11 +24,11 @@ public class Department {
         this.name = name;
     }
 
-    public Appointment getArrAp() {
+    public List<Appointment> getArrAp() {
         return arrAp;
     }
 
-    public void setArrAp(Appointment arrAp) {
+    public void setArrAp(List<Appointment> arrAp) {
         this.arrAp = arrAp;
     }
 }

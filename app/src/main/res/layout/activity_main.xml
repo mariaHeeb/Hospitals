@@ -1,87 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
-    <!-- Main content layout (relative to the drawer) -->
-    <RelativeLayout
+    <include
+        android:id="@+id/app_bar_main"
+        layout="@layout/app_bar_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" />
 
-        <!-- Chat Square on the Right Side -->
-        <RelativeLayout
-            android:id="@+id/chatLayout"
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:background="@drawable/chat_background"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="40dp"
-            android:layout_alignParentTop="true">
-
-            <!-- Chat Box (Input Area) -->
-            <EditText
-                android:id="@+id/chatInput"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:hint="Type a message"
-                android:padding="10dp"
-                android:background="@drawable/rounded_input_field"/>
-
-        </RelativeLayout>
-
-        <!-- Send Button Below the Chat -->
-        <Button
-            android:id="@+id/sendButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Send"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/chatLayout"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="@color/colorAccent"
-            android:textColor="@android:color/white"/>
-
-        <!-- Emergency Call Button at the Bottom -->
-        <Button
-            android:id="@+id/emergencyCallButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Emergency Call"
-            android:layout_alignParentBottom="true"
-            android:backgroundTint="@color/colorRed"
-            android:textColor="@android:color/white"
-            android:padding="16dp"/>
-
-    </RelativeLayout>
-
-    <!-- Left Menu Drawer -->
-
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
 </androidx.drawerlayout.widget.DrawerLayout>
-
-
-
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:id="@+id/main"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    tools:context=".MainActivity">-->
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Hello World!"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TextView to display and select appointment date -->
+    <TextView
+        android:id="@+id/tvSelectDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select appointment date"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:textColor="#333"
+        android:textSize="16sp" />
+
+    <!-- Spinner for selecting an available hour -->
+    <Spinner
+        android:id="@+id/spinnerTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <!-- Input field for user ID (non-editable) -->
+    <EditText
+        android:id="@+id/etUserId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="User ID"
+        android:inputType="text"
+        android:layout_marginTop="8dp" />
+
+    <!-- Spinner for selecting a department -->
+    <Spinner
+        android:id="@+id/spinnerDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

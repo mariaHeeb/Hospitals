@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.hospitals.LogInActivity;
-import com.example.hospitals.MainActivity2;
 import com.example.hospitals.R;
 import com.example.hospitals.db.UserDatabase;
 

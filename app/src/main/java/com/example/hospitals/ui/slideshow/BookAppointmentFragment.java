@@ -1,5 +1,6 @@
 package com.example.hospitals.ui.slideshow;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -8,20 +9,18 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hospitals.R;
+import com.example.hospitals.ResultsActivity;
 
-
+/**
+ * BookAppointmentFragment provides a grid-like list of categories (e.g., Brain, Stomach, Eye, etc.)
+ * that the user can choose from. When a category is selected, a Toast is shown and the user is
+ * directed to the ResultsActivity with the chosen category type.
+ */
 public class BookAppointmentFragment extends Fragment {
-
-    // Search bar
-    private EditText searchEditText;
 
     // Category Layouts (Row 1)
     private LinearLayout brainLayout;
@@ -35,12 +34,14 @@ public class BookAppointmentFragment extends Fragment {
     private LinearLayout liverLayout;
     private LinearLayout skinLayout;
 
-    // Doctor Buttons
-    private Button doctorOneButton;
-    private Button doctorTwoButton;
+    // Additional categories (Row 3)
+    private LinearLayout boneLayout;
+    private LinearLayout womenLayout;
+    private LinearLayout childLayout;
+    private LinearLayout mentalHealthLayout;
 
     public BookAppointmentFragment() {
-        // Required empty public constructor
+        // Required empty public constructor.
     }
 
     public static BookAppointmentFragment newInstance() {
@@ -51,119 +52,116 @@ public class BookAppointmentFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflate the fragment layout from XML.
         return inflater.inflate(R.layout.fragment_book_appointment, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        // 1. Find all views
+        // 1. Find all views.
         initViews(view);
-
-        // 2. Set up listeners
+        // 2. Set up click listeners for each category.
         setupListeners();
     }
 
     /**
-     * Find all views by ID
+     * Initialize all category views by their IDs.
+     *
+     * @param view the root view of the fragment.
      */
     private void initViews(View view) {
-//        searchEditText = view.findViewById(R.id.searchEditText);
-//
-//        // Categories (Row 1)
-//        brainLayout = view.findViewById(R.id.brainLayout);
-//        stomachLayout = view.findViewById(R.id.stomachLayout);
-//        eyeLayout = view.findViewById(R.id.eyeLayout);
-//        heartLayout = view.findViewById(R.id.heartLayout);
-//
-//        // Categories (Row 2)
-//        lungsLayout = view.findViewById(R.id.lungsLayout);
-//        kidneysLayout = view.findViewById(R.id.kidneysLayout);
-//        liverLayout = view.findViewById(R.id.liverLayout);
-//        skinLayout = view.findViewById(R.id.skinLayout);
-//
-//        // Doctor Buttons
-//        doctorOneButton = view.findViewById(R.id.doctorOneButton);
-//        doctorTwoButton = view.findViewById(R.id.doctorTwoButton);
+        // Categories (Row 1)
+        brainLayout = view.findViewById(R.id.brainLayout);
+        stomachLayout = view.findViewById(R.id.stomachLayout);
+        eyeLayout = view.findViewById(R.id.eyeLayout);
+        heartLayout = view.findViewById(R.id.heartLayout);
+        // Categories (Row 2)
+        lungsLayout = view.findViewById(R.id.lungsLayout);
+        kidneysLayout = view.findViewById(R.id.kidneysLayout);
+        liverLayout = view.findViewById(R.id.liverLayout);
+        skinLayout = view.findViewById(R.id.skinLayout);
+        // Additional Categories (Row 3)
+        boneLayout = view.findViewById(R.id.boneLayout);
+        womenLayout = view.findViewById(R.id.womenLayout);
+        childLayout = view.findViewById(R.id.childLayout);
+        mentalHealthLayout = view.findViewById(R.id.mentalHealthLayout);
     }
 
     /**
-     * Set up click listeners for categories and doctors
+     * Set up click listeners for each category layout.
      */
     private void setupListeners() {
-        // Category Clicks
-        brainLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "Brain category selected", Toast.LENGTH_SHORT).show();
-            }
+        // Row 1 category listeners
+        brainLayout.setOnClickListener(v -> {
+            showToast("Brain category selected");
+            goToResultActivity("brain");
         });
+        stomachLayout.setOnClickListener(v -> {
+            showToast("Stomach category selected");
+            goToResultActivity("stomach");
+        });
+        eyeLayout.setOnClickListener(v -> {
+            showToast("Eye category selected");
+            goToResultActivity("eye");
+        });
+        heartLayout.setOnClickListener(v -> {
+            showToast("Heart category selected");
+            goToResultActivity("heart");
+        });
+        // Row 2 category listeners
+        lungsLayout.setOnClickListener(v -> {
+            showToast("Lungs category selected");
+            goToResultActivity("lungs");
+        });
+        kidneysLayout.setOnClickListener(v -> {
+            showToast("Kidneys category selected");
+            goToResultActivity("kidneys");
+        });
+        liverLayout.setOnClickListener(v -> {
+            showToast("Liver category selected");
+            goToResultActivity("liver");
+        });
+        skinLayout.setOnClickListener(v -> {
+            showToast("Skin category selected");
+            goToResultActivity("skin");
+        });
+        // Row 3 category listeners
+        boneLayout.setOnClickListener(v -> {
+            showToast("Bone category selected");
+            goToResultActivity("bone");
+        });
+        womenLayout.setOnClickListener(v -> {
+            showToast("Women category selected");
+            goToResultActivity("women");
+        });
+        childLayout.setOnClickListener(v -> {
+            showToast("Child category selected");
+            goToResultActivity("child");
+        });
+        mentalHealthLayout.setOnClickListener(v -> {
+            showToast("Mental Health category selected");
+            goToResultActivity("mentalHealth");
+        });
+    }
 
-        stomachLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "Stomach category selected", Toast.LENGTH_SHORT).show();
-            }
-        });
+    /**
+     * Display a short Toast message.
+     *
+     * @param message the message to display.
+     */
+    private void showToast(String message) {
+        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+    }
 
-        eyeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "Eye category selected", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        heartLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "Heart category selected", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        lungsLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "Lungs category selected", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        kidneysLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "Kidneys category selected", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        liverLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "Liver category selected", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        skinLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "Skin category selected", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        // Doctor Buttons
-        doctorOneButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // For example, you might launch an appointment screen
-                Toast.makeText(getContext(), "Dr. Daryl Nehls is selected!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        doctorTwoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "Dr. Sophia Patel is selected!", Toast.LENGTH_SHORT).show();
-            }
-        });
+    /**
+     * Launch ResultsActivity, passing the selected category type.
+     *
+     * @param type the category type string.
+     */
+    private void goToResultActivity(String type) {
+        Intent intent = new Intent(getActivity(), ResultsActivity.class);
+        intent.putExtra("type", type);
+        startActivity(intent);
     }
 }
