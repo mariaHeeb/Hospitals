@@ -1,4 +1,4 @@
-# ![Hospital Management App](Screen_Recording_20250304_012048_hospitals-ezgif.com-optimize.gif)
+# ![Hospital Management App]([Screen_Recording_20250304_012048_hospitals-ezgif.com-optimize.gif](https://github.com/mariaHeeb/Hospitals/blob/main/Screen_Recording_20250304_012048_hospitals-ezgif.com-optimize.gif])
 
 # Hospital Management App
 
